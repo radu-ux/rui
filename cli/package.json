@@ -1,0 +1,21 @@
+{
+  "name": "cli",
+  "description": "The CLI tool for managing @rui lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "@rui": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "shelljs": "^0.8.5"
+  }
+}
