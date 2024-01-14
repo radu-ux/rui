@@ -21,13 +21,41 @@ export async function generate() {
   const workingDir = shell.pwd();
   const tailwindConfigPath = `${workingDir}/tailwind.config.js`;
   const tailwindConfigTemplate = `
-  /** @type {import('tailwindcss').Config} */
-  const colors = require("tailwindcss/colors");
-  module.exports = {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-    theme: { extends: { colors: {  } } },
-    plugins: [],
-  }
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        rui: {
+          900: "#0f172a",
+          800: "#1e293b",
+          700: "#334155",
+          600: "#475569",
+          500: "#64748b",
+          400: "#94a3b8",
+          300: "#cbd5e1",
+          200: "#e2e8f0",
+          100: "#f1f5f9",
+          50: "#f8fafc",
+        },
+        "rui-red": {
+          900: "#7f1d1d",
+          800: "#991b1b",
+          700: "#b91c1c",
+          600: "#dc2626",
+          500: "#ef4444",
+          400: "#f87171",
+          300: "#fca5a5",
+          200: "#fecaca",
+          100: "#fee2e2",
+          50: "#fef2f2",
+        },
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+};
   `;
   await fsPromises.writeFile(tailwindConfigPath, tailwindConfigTemplate);
 }
