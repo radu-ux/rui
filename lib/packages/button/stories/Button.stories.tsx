@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { Mail } from "lucide-react";
 
-import { Button } from "./Button";
+import { Button } from "../src/Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,

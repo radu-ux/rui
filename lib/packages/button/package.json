@@ -1,0 +1,24 @@
+{
+  "name": "rui-button",
+  "version": "1.0.0",
+  "description": "@rui button component",
+  "main": "./src/Button.tsx",
+  "keywords": [
+    "@rui",
+    "button"
+  ],
+  "author": "Uivari Radu-Iulian",
+  "license": "ISC",
+  "dependencies": {
+    "@react-aria/button": "^3.9.1",
+    "@react-aria/interactions": "^3.20.1",
+    "lucide-react": "^0.309.0",
+    "tailwind-variants": "^0.1.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18"
+  }
+}
