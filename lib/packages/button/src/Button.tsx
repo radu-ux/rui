@@ -1,8 +1,9 @@
 import * as React from "react";
-import { useButton, useHover, AriaButtonProps } from "react-aria";
+import { useButton, AriaButtonProps } from "@react-aria/button";
+import { useHover } from "@react-aria/interactions";
 import { tv } from "tailwind-variants";
 
-import { clsx } from "../utlis";
+import { clsx } from "rui-component-utils";
 import { Loader } from "lucide-react";
 
 const button = tv({

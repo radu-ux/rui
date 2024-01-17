@@ -6,7 +6,7 @@ export async function generate() {
   // Step 1: install dependecies (tailwindcss, tailwind-animte, tailwind-variants, post-css)
   chalk.blue("[step 1]: installing dependecies....");
   shell.exec(
-    "npm install npm install -D tailwindcss postcss autoprefixer tailwindcss-animate tailwind-variants"
+    "npm install npm install -D tailwindcss postcss autoprefixer tailwindcss-animate tailwind-variants tailwind-merge react-aria"
   );
 
   chalk.blue("[step 2]: installing @rui/theme....");
