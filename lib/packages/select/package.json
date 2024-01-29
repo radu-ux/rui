@@ -1,0 +1,30 @@
+{
+  "name": "rui-select",
+  "version": "1.0.0",
+  "description": "@rui select component",
+  "main": "./src/Select.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "@rui",
+    "select"
+  ],
+  "author": "Uivari Radu-Iulian",
+  "license": "ISC",
+  "dependencies": {
+    "@react-aria/button": "^3.9.1",
+    "@react-aria/combobox": "^3.8.2",
+    "@react-aria/i18n": "^3.10.0",
+    "@react-aria/listbox": "^3.11.3",
+    "@react-aria/overlays": "^3.20.0",
+    "@react-aria/searchfield": "^3.7.1",
+    "@react-aria/textfield": "^3.14.1",
+    "@react-stately/collections": "^3.10.4",
+    "@react-stately/combobox": "^3.8.1",
+    "@react-stately/list": "^3.10.2",
+    "@react-stately/overlays": "^3.6.4",
+    "@react-stately/searchfield": "^3.5.0",
+    "@react-types/shared": "^3.22.0"
+  }
+}

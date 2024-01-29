@@ -46,13 +46,22 @@ const buttonHover = tv({
 
 interface Props extends AriaButtonProps {
   variant?: keyof typeof button.variants.variant;
+  className?: string;
   icon?: React.ReactNode;
   loading?: boolean;
+  buttonRef?: React.RefObject<HTMLButtonElement>;
 }
 
-export function Button({ variant, icon, loading, ...props }: Props) {
+export function Button({
+  variant,
+  icon,
+  loading,
+  className: classNameProp,
+  ...props
+}: Props) {
   const ref = React.useRef<React.ElementRef<"button">>(null);
-  const { buttonProps, isPressed } = useButton(props, ref);
+  const { buttonRef = ref } = props;
+  const { buttonProps, isPressed } = useButton(props, buttonRef ?? ref);
   const { hoverProps, isHovered } = useHover(props);
   const { className, ...restButtonProps } = buttonProps;
 
@@ -77,8 +86,10 @@ export function Button({ variant, icon, loading, ...props }: Props) {
         isPressed && !isLink && "scale-90",
         hasIcon && "flex gap-2 items-center",
         disabledCausedByLoading && !isLink && "flex gap-2 items-center",
-        className
+        className,
+        classNameProp
       )}
+      ref={buttonRef}
     >
       {disabledCausedByLoading && !isLink ? (
         <span className="animate-in zoom-in-0 duration-300">
